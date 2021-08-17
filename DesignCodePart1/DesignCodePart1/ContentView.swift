@@ -9,8 +9,45 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        ZStack {
+            VStack {
+                Spacer()
+            }
+            .frame(width: 300, height: 220)
+            // background는 왜 안보일까
+            // VStack을 올리고 아래 VStack을 올려서? -> ㅇㅇ 아래 VStack 아래에 깔려있음 그걸 offset을 이용해 보이게함
+            .background(Color.blue)
+            .cornerRadius(20)
+            .shadow(radius: 20)
+            .offset(x: 0, y: -20)
+            
+            VStack {
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("UI Design")
+                            .font(.title)
+                            .fontWeight(.semibold)
+                            .foregroundColor(Color.white)
+                        Text("certificate")
+                            .foregroundColor(Color("accent"))
+                    }
+                    Spacer()
+                    Image("Logo1")
+                }
+                // padding default = 16
+                .padding(.horizontal, 20)
+                .padding(.top, 20)
+                Spacer()
+                Image("Card1")
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: 300, height: 110, alignment: .top)
+            }
+            .frame(width: 340, height: 220)
+            .background(Color.black)
+            .cornerRadius(20)
+            .shadow(radius: 20)
+        }
     }
 }
 
