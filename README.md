@@ -57,7 +57,7 @@ Keyboard Shortcuts
 **2 - Layout and Stacks**    
 - Stack들을 이용하여 뷰 올리기 학습
 - modifier 중에서도 clip(이미지를 자르는) 기능이 들어가있는 기능이 있다.
-- cornerRadius가 그예이다. .shadow를 적용하고 cornerRadius를 적용하면 clip되기 때문에 그림자가 적용된것을 확인할 수 없다.
+- `.cornerRadius`가 그예이다. `.shadow`를 적용하고 `.cornerRadius`를 적용하면 clip되기 때문에(경계값으로 프레임을 잡고 잘라버림) 그림자가 적용된것을 확인할 수 없다.
 - SwiftUI는 선언적 언어이니 modifier 적용에도 순서에 주의하자.
 
 <br>
@@ -85,10 +85,25 @@ Keyboard Shortcuts
 <br>
 
 **6 - Timing Curve and Delay Animation**    
+- State에 따라서 뷰의 offset이나 Animation을 다르게 적용해 주는데, View의 Componet를 잘 분리해주지 않으면 상태에 따른 뷰를 보여주는 코드를 적용하는데 힘들것으로 보인다.
+- 선언적 언어의 장점을 잘 활용하기 위해서는 뷰를 잘 나눠줘야 할 것 같다.
+- 한 뷰에 같은 modifier를 정해주더라도 상태에 따라서 다르게 적용가능, 즉 뷰가 상태에 따라 보이게 할 수 있다.   
+```swift
+.rotationEffect(.degrees(show ? 0 : 5))
+.rotationEffect(Angle(degrees: showCard ? -5 : 0))
+```   
 
 <br>
 
-**Dissmiss and Drag Anchors**    
+**7 - Dissmiss and Drag Anchors**    
+
+<br>
+
+**8 - SF Symbols and Props**    
+
+<br>
+
+**9 - Color Literal, Gradient and Overlay**    
 
 <br>
 
