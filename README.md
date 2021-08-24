@@ -5,8 +5,8 @@
 우선은 designcode.io의 Swift 강의를 듣고 정리하고 싶고
 일단 Part1까지는 Readme에 정리 후 Part2를 시작할때는 각 코스마다 md파일을 따로 만들어 Readme 에 목록을 만들어 링크 타서 들어갈 수 있게 하기!
 
-### Part 1
-**1 - Learn SwiftUI for iOS 13**    
+## Part 1
+### 1 - Learn SwiftUI for iOS 13
 - SwiftUI는 어떤 녀석인가? 전체적인 설명
 - `@State & Animation` 상태만 정해준다면 SwiftUI가 두 상태 사이의 전환을 알아낼 것이다.
 - `Stack` 에는  H, V, Z Stack이 있고, `spacing`, `alignment`를 이용하여 원하는 정렬로 배치할 수 있다.
@@ -54,7 +54,7 @@ Keyboard Shortcuts
 
 <br>
 
-**2 - Layout and Stacks**    
+### 2 - Layout and Stacks 
 - Stack들을 이용하여 뷰 올리기 학습
 - modifier 중에서도 clip(이미지를 자르는) 기능이 들어가있는 기능이 있다.
 - `.cornerRadius`가 그예이다. `.shadow`를 적용하고 `.cornerRadius`를 적용하면 clip되기 때문에(경계값으로 프레임을 잡고 잘라버림) 그림자가 적용된것을 확인할 수 없다.
@@ -62,19 +62,19 @@ Keyboard Shortcuts
 
 <br>
 
-**3 - Components and Visual Effects 2**    
+### 3 - Components and Visual Effects 2
 - View 재사용할 수 있게 Componemt로 나누는 작업 학습!!
 - blur를 처음봐서 신기했음 (뷰를 흐리게 만들어주는 기능)
 
 <br>
 
-**4 - Animations and States**    
+### 4 - Animations and States
 - State 어노테이션을 활용하여 Animation 적용
 - 삼항연산자를 사용해서 true false 일 때 다른 값들을 넣어주어 화면을 표시하는게 재밌었음.
 
 <br>
 
-**5 - Gestures and Events**    
+### 5 - Gestures and Events
 `@State`를 적용하여 뷰, 제스쳐, 이벤트 등을 다루는 방법 학습
 
 - `@State` annotation을 이용해  `viewState`라는 변수 선언
@@ -84,7 +84,7 @@ Keyboard Shortcuts
 
 <br>
 
-**6 - Timing Curve and Delay Animation**    
+### 6 - Timing Curve and Delay Animation
 - State에 따라서 뷰의 offset이나 Animation을 다르게 적용해 주는데, View의 Componet를 잘 분리해주지 않으면 상태에 따른 뷰를 보여주는 코드를 적용하는데 힘들것으로 보인다.
 - 선언적 언어의 장점을 잘 활용하기 위해서는 뷰를 잘 나눠줘야 할 것 같다.
 - 한 뷰에 같은 modifier를 정해주더라도 상태에 따라서 다르게 적용가능, 즉 뷰가 상태에 따라 보이게 할 수 있다.   
@@ -95,7 +95,7 @@ Keyboard Shortcuts
 
 <br>
 
-**7 - Dissmiss and Drag Anchors**    
+### 7 - Dissmiss and Drag Anchors
 - SF Symbol을 다운받아서 사용하였다.
 - 새로운 화면을 만들기 위해 SwiftUI View 파일을 만들어 주었다.
 - 이 뷰에서도 Component를 만들어 주었는데, 프로퍼티를 선언해줌으로써 각기 다른 타이틀과 아이콘으로 재사용해주었다.!
@@ -110,11 +110,11 @@ Keyboard Shortcuts
 
 <br>
 
-**8 - SF Symbols and Props**    
+### 8 - SF Symbols and Props
 
 <br>
 
-**9 - Color Literal, Gradient and Overlay**    
+### 9 - Color Literal, Gradient and Overlay
 
 <br>
 
