@@ -96,6 +96,17 @@ Keyboard Shortcuts
 <br>
 
 **7 - Dissmiss and Drag Anchors**    
+- SF Symbol을 다운받아서 사용하였다.
+- 새로운 화면을 만들기 위해 SwiftUI View 파일을 만들어 주었다.
+- 이 뷰에서도 Component를 만들어 주었는데, 프로퍼티를 선언해줌으로써 각기 다른 타이틀과 아이콘으로 재사용해주었다.!
+
+💡 SF Symbol을 다운 받기만 하면 import를 따로 하지 않아도 아이콘을 쓸 수 있는건가??   
+✅  SF Symbol을 다운 받지 못하면 `gear` 같이 제공해주는 이미지를 쓸 수 없음.    
+
+<br>
+
+💡 맞다면 따로 import 하지 않고 배포를 해도 핸드폰에서 그 icon이 잘 보이는걸까??   
+✅   
 
 <br>
 

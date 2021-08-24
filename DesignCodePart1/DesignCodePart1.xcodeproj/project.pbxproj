@@ -11,6 +11,7 @@
 		E280890026CAA86C009A2290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28088FF26CAA86C009A2290 /* ContentView.swift */; };
 		E280890226CAA86D009A2290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280890126CAA86D009A2290 /* Assets.xcassets */; };
 		E280890526CAA86D009A2290 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280890426CAA86D009A2290 /* Preview Assets.xcassets */; };
+		E280890D26D3E2BC009A2290 /* MenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E280890C26D3E2BC009A2290 /* MenuView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		E280890126CAA86D009A2290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E280890426CAA86D009A2290 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E280890626CAA86D009A2290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E280890C26D3E2BC009A2290 /* MenuView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */,
 				E28088FF26CAA86C009A2290 /* ContentView.swift */,
+				E280890C26D3E2BC009A2290 /* MenuView.swift */,
 				E280890126CAA86D009A2290 /* Assets.xcassets */,
 				E280890626CAA86D009A2290 /* Info.plist */,
 				E280890326CAA86D009A2290 /* Preview Content */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E280890026CAA86C009A2290 /* ContentView.swift in Sources */,
+				E280890D26D3E2BC009A2290 /* MenuView.swift in Sources */,
 				E28088FE26CAA86C009A2290 /* DesignCodePart1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
