@@ -13,6 +13,7 @@
 		E291384F26D538E70035F17E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E291384E26D538E70035F17E /* Preview Assets.xcassets */; };
 		E291385926D541020035F17E /* AccountBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291385726D541010035F17E /* AccountBackground.swift */; };
 		E291385A26D541020035F17E /* VisualEffectBlur.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291385826D541020035F17E /* VisualEffectBlur.swift */; };
+		E291385C26D68A870035F17E /* TrackableScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E291385B26D68A870035F17E /* TrackableScrollView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		E291385026D538E70035F17E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E291385726D541010035F17E /* AccountBackground.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountBackground.swift; sourceTree = "<group>"; };
 		E291385826D541020035F17E /* VisualEffectBlur.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VisualEffectBlur.swift; sourceTree = "<group>"; };
+		E291385B26D68A870035F17E /* TrackableScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackableScrollView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				E291385626D540CC0035F17E /* Graphics */,
 				E291384726D538E50035F17E /* DesignCodeCombineApp.swift */,
 				E291384926D538E50035F17E /* ContentView.swift */,
+				E291385B26D68A870035F17E /* TrackableScrollView.swift */,
 				E291384B26D538E70035F17E /* Assets.xcassets */,
 				E291385026D538E70035F17E /* Info.plist */,
 				E291384D26D538E70035F17E /* Preview Content */,
@@ -153,6 +156,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E291384A26D538E50035F17E /* ContentView.swift in Sources */,
+				E291385C26D68A870035F17E /* TrackableScrollView.swift in Sources */,
 				E291385926D541020035F17E /* AccountBackground.swift in Sources */,
 				E291384826D538E50035F17E /* DesignCodeCombineApp.swift in Sources */,
 				E291385A26D541020035F17E /* VisualEffectBlur.swift in Sources */,
