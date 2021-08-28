@@ -111,10 +111,59 @@ Keyboard Shortcuts
 <br>
 
 ### 8 - SF Symbols and Props
-
+MenuView 뷰 구현, Component 분리 
 <br>
 
 ### 9 - Color Literal, Gradient and Overlay
+Gradient를 사용해서 그라데이션 줄 수 있다.   
+Color Literal 사용해서 색깔 적용. 일반적인 Style Guide에 의하면 Color Literal을 앞으로 사용하진 않을듯., 
+`.overLay()`  덮어씌우다
+- `ZStack` 방법 말고 뷰를 겹치는 방법 중 하나.    
+<br>
+
+`overlay(_:alignment:)`
+- `ZStack`을 적용했을 때와 비슷한 효과를 내는 modifier이다.
+- 적용한 뷰의 위에 뷰가 올려지게 되고, 특이점은 `.frame()` 따로 지정하지 않으면 적용한 뷰와 같은 크기를 가진다는 것이다.
+- `background()`는 `overlay`와는 반대로 적용한 뷰의 하위에 뷰가 쌓인다.
+- [overlay(_:alignment:)](https://developer.apple.com/documentation/swiftui/view/overlay(_:alignment:)) 는 15이전까지만 사용되고 deprecated 됨.
+- [overlay(alignment:content:)](https://developer.apple.com/documentation/swiftui/view/overlay(alignment:content:)) 대체자로는 iOS 15 부터 사용가능한 이 메서드이다.   
+<br>
+
+`modifier 연속 적용`
+아래의 코드를 처음 보았을 때 신기하기도 했지만 혼란스러웠다.   
+```swift
+Color.white
+    .frame(width: 38, height: 6)
+    .cornerRadius(3)
+    .frame(width: 130, height: 6)
+    .background(Color(#colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)).opacity(0.08))
+    .cornerRadius(3)
+    
+```    
+
+
+swiftUI의 특성을 아직 확실히 이해하진 못한 상황이지만 modifer의 대부분은 View 프로토콜을 따르는 content를 반환한다.      
+정확히 말하자면 `cornerRadius`가 반환한 뷰에 `frame`을 지정해주는게 맞지만 좀 위의 코드와 별개로 간결하게 상황을 바라보자면 이미지 처럼 `.frame()`을 두번 적용했을 때를 확실하게 이해하고 싶었다.   
+Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰의 크기를 값 만큼 변하여 반환해준걸로 보인다.   
+- 여기서 새로운 `.frame(width: 130, height: 6)`처럼 .frame을 한번 더 적용해 줄 시 나는 `white`컬러의 뷰가 130만큼 늘어날 줄 알았지만, 너비가 38 사이즈의 뷰가 white 색으로 자리 잡고 있고, 그것과는 별개로 default 색이 뭔지는 모르겠지만 기대했던 하얀색이 아닌 너비 130을 가진 새로운 뷰가 생성되었다.   
+💡 즉 `Color.white`가 아닌 Color.white에 `.frame 수정자를 적용해 리턴한 뷰`의 사이즈를 새로 선언한 `.frame(width: 130, height: 6)` 수정자를 통해 사이즈를 정해주었다고 이해하였다.    
+글로 쓰면서도 정리가 잘 안되고 어려웠지만 내 생각의 정리에는 도움이 된 것 같다.   
+이게 잘못된 이해일 수도 있지만 WWDC와 다른 문서들을 보며 나의 생각을 계속 점검해 나갈 생각이다.   
 
 <br>
 
+`.frame(width: 130, height: 6, alignment: .leading)`을 적용한 결과 너비 38의 뷰가 leading으로 정렬 되는 것으로 볼 때 `.frame(width: 130, height: 6, alignment: .leading)`로 수정해준 뷰가 너비 38의 뷰를 감싸고 있음을 알 수 있다.
+
+<br>
+
+### 10 - Animation Between Screens
+
+<br>
+
+### 11 - Drag Progress and Tap Background
+
+<br>
+
+### 12 - Binding and Screen Size
+
+<br>
