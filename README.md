@@ -1,5 +1,5 @@
 # DesignCodeStudy
-디자인 코드 강의 보면서 실습, 메모하듯 기록, 모르는 개념 정리
+디자인 코드 강의 보면서 실습, 메모하듯 기록, 모르는 개념 정리.  
 
 ## 목표
 우선은 designcode.io의 Swift 강의를 듣고 정리하고 싶고
@@ -141,6 +141,10 @@ Color.white
     
 ```    
 
+<div align="center">
+    <img src="./images/aboutFrame.png"  width="300" height="300" >
+    <img src="./images/aboutFrameAlignment.png"  width="300" height="300" >
+</div>
 
 swiftUI의 특성을 아직 확실히 이해하진 못한 상황이지만 modifer의 대부분은 View 프로토콜을 따르는 content를 반환한다.      
 정확히 말하자면 `cornerRadius`가 반환한 뷰에 `frame`을 지정해주는게 맞지만 좀 위의 코드와 별개로 간결하게 상황을 바라보자면 이미지 처럼 `.frame()`을 두번 적용했을 때를 확실하게 이해하고 싶었다.   
