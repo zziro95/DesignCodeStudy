@@ -162,9 +162,35 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 <br>
 
 ### 10 - Animation Between Screens
+`.renderingMode(.mode)`   
+`template`   
+- 이미지의 불투명 영역이  가진 본래의 색 무시하고 원하는 색으로 변경해 템플릿 이미지로 활용
+`original`     
+- 항상 이미지 본래의 색 유지   
 
 <br>
 
+`.resizable()`
+- 이미지의 사이즈 frame을 조절하는데 `.resizable()`을 하지 않고 했더니 변화가 없었다.
+
+<br>
+
+`.edgesIgnoringSafeArea()`, `.ignoresSafeArea()`의 차이   
+`.edgesIgnoringSafeArea()`   
+- 일단 이건 14.5까지 밖에 지원이 안된다. `deprecated`됨 -> `.ignoresSafeArea()`  를 쓰라고 나와있음
+
+`.ignoresSafeArea(regions: , edge:)`   
+- iOS 14버전 이상 지원가능
+- 엣지는 어느정도 예상가능
+- regions에는 `.all`, `container`, `keyboard`가 있는데 각 의미가 뭘까?
+- 내 이해로는 `.all` 은 모든 세이프 에어리어 무시, `container` <->  `.all`과의 차이는 모르겠다., `keyboard`는 키보드는 `container`   `.all` 와 차이가 있어 보이는데 정확하게 알아내지는 못했다.
+- 애매한 이해가 되었는데 사용하면서 자세하게 알아보자
+
+`.ignoresSafeArea(.all)`를 적용할 경우 세이프에어리어를 무시하기 때문에 `top`, `bottom` 기준으로 잡은 `.padding()`이 원하는 결과대로 보여지지 않는다.   
+
+여러가지로 집중이 잘 되지 않던 날 .,.,화이팅    
+
+<br>
 ### 11 - Drag Progress and Tap Background
 
 <br>

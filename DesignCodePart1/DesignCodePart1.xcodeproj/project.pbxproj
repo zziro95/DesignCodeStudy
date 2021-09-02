@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B33137326E106770002B9C0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B33137226E106770002B9C0 /* Home.swift */; };
 		E28088FE26CAA86C009A2290 /* DesignCodePart1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */; };
 		E280890026CAA86C009A2290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28088FF26CAA86C009A2290 /* ContentView.swift */; };
 		E280890226CAA86D009A2290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280890126CAA86D009A2290 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B33137226E106770002B9C0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		E28088FA26CAA86C009A2290 /* DesignCodePart1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodePart1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodePart1App.swift; sourceTree = "<group>"; };
 		E28088FF26CAA86C009A2290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */,
 				E28088FF26CAA86C009A2290 /* ContentView.swift */,
+				2B33137226E106770002B9C0 /* Home.swift */,
 				E280890C26D3E2BC009A2290 /* MenuView.swift */,
 				E280890126CAA86D009A2290 /* Assets.xcassets */,
 				E280890626CAA86D009A2290 /* Info.plist */,
@@ -143,6 +146,7 @@
 			files = (
 				E280890026CAA86C009A2290 /* ContentView.swift in Sources */,
 				E280890D26D3E2BC009A2290 /* MenuView.swift in Sources */,
+				2B33137326E106770002B9C0 /* Home.swift in Sources */,
 				E28088FE26CAA86C009A2290 /* DesignCodePart1App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
