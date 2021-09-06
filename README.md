@@ -191,10 +191,52 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 여러가지로 집중이 잘 되지 않던 날 .,.,화이팅    
 
 <br>
+
 ### 11 - Drag Progress and Tap Background
+
+```swift
+// 툴무명도를 0으로 설정하면 상호작용을 하지 않고 0.001로 주면 상호작용을 한다
+// 0으로 적용했을때는 처음에 백그라운드에 opacity가 적용되지 않아 뷰가 인식이 되지않아? 눌러도 반응이 없고
+// 0.001 이라도 아주 작은값으로 설정하면 뷰가 인식되어? 상호작용을 한다 구체적인 이유는 모르겠지만 차이는 있다.
+.background(Color.black.opacity(0.001))
+```     
+<div align="center">
+    <img src="./images/opacityzero.png"  width="300" height="300" >
+</div>
+
+<br>
+
+```swift
+// 이 코드에 녹아 버림
+// 일단은 그려놓고 offset으로 안보이게 설정한다음에 
+// CGSize라는 상태값을 바라보고
+// 드래그 제스쳐를 통해 높이가 특정값 이하로 내려가면 상태를 바꾼다.!! 이거슨 대단..
+
+.gesture(
+    DragGesture().onChanged { value in
+    self.viewState = value.translation
+}
+.onEnded { value in
+    if self.viewState.height > 50 {
+    self.showProfile = false
+}
+    self.viewState = .zero
+}
+)
+```   
+
+<br>
+
+💡`SwiftUI`의 핵심은,. 선언적이기 때문에 뷰를 다 그려놓는다?   
+💡 그리고 상태값에 따라 뷰를 보여준다 안보여준다 << .offset을 많이 활용하는것 같음.  
+✅ 그렇다면 푸쉬나 프리젠트를 사용하지 않는걸까???
+- 그건 아닌것 같다 화면 전환에 따라서 데이터가 일시적이라면 프리젠트, 연속된다면 푸쉬를 해주는건 일치해보인다.
+- 하지만 화면을 새로 띄우거나 댑스가 깊어지는것과 같은 작업이 아니라면 하나의 화면에 모두 띄워놓고 숨겨놓냐 아니냐의 차이같다.   
 
 <br>
 
 ### 12 - Binding and Screen Size
-
+컴포넌트를 만들고 상태를 바인딩하는 방법에 대해 배운다.   
+이전에는 많은 뷰들이 사용되고 있기 때문에 뷰 코드가 지저분해지고 있다.   
+컴포넌트를 어떻게 만들고 컴포넌트간에 상태를 어떻게 공유하는가를 배울것이다.   
 <br>
