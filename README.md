@@ -201,7 +201,7 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 .background(Color.black.opacity(0.001))
 ```     
 <div align="center">
-    <img src="./images/opacityzero.png"  width="300" height="300" >
+    <img src="./images/opacityzero.png"  width="300" height="600" >
 </div>
 
 <br>
