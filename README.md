@@ -54,6 +54,7 @@ Keyboard Shortcuts
 
 <br>
 
+---
 ### 2 - Layout and Stacks 
 - Stack들을 이용하여 뷰 올리기 학습
 - modifier 중에서도 clip(이미지를 자르는) 기능이 들어가있는 기능이 있다.
@@ -62,18 +63,22 @@ Keyboard Shortcuts
 
 <br>
 
+---
 ### 3 - Components and Visual Effects 2
 - View 재사용할 수 있게 Componemt로 나누는 작업 학습!!
 - blur를 처음봐서 신기했음 (뷰를 흐리게 만들어주는 기능)
+- padding `.padding([.leading, .vertical], 16)`와 같이 사용하면 중복 코드룰 줄일 수 있다.
 
 <br>
 
+---
 ### 4 - Animations and States
 - State 어노테이션을 활용하여 Animation 적용
 - 삼항연산자를 사용해서 true false 일 때 다른 값들을 넣어주어 화면을 표시하는게 재밌었음.
 
 <br>
 
+---
 ### 5 - Gestures and Events
 `@State`를 적용하여 뷰, 제스쳐, 이벤트 등을 다루는 방법 학습
 
@@ -84,6 +89,7 @@ Keyboard Shortcuts
 
 <br>
 
+---
 ### 6 - Timing Curve and Delay Animation
 - State에 따라서 뷰의 offset이나 Animation을 다르게 적용해 주는데, View의 Componet를 잘 분리해주지 않으면 상태에 따른 뷰를 보여주는 코드를 적용하는데 힘들것으로 보인다.
 - 선언적 언어의 장점을 잘 활용하기 위해서는 뷰를 잘 나눠줘야 할 것 같다.
@@ -95,6 +101,7 @@ Keyboard Shortcuts
 
 <br>
 
+---
 ### 7 - Dissmiss and Drag Anchors
 - SF Symbol을 다운받아서 사용하였다.
 - 새로운 화면을 만들기 위해 SwiftUI View 파일을 만들어 주었다.
@@ -110,10 +117,12 @@ Keyboard Shortcuts
 
 <br>
 
+---
 ### 8 - SF Symbols and Props
 MenuView 뷰 구현, Component 분리 
 <br>
 
+---
 ### 9 - Color Literal, Gradient and Overlay
 Gradient를 사용해서 그라데이션 줄 수 있다.   
 Color Literal 사용해서 색깔 적용. 일반적인 Style Guide에 의하면 Color Literal을 앞으로 사용하진 않을듯., 
@@ -161,6 +170,7 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 
 <br>
 
+---
 ### 10 - Animation Between Screens
 `.renderingMode(.mode)`   
 `template`   
@@ -192,6 +202,7 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 
 <br>
 
+---
 ### 11 - Drag Progress and Tap Background
 
 ```swift
@@ -235,8 +246,37 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 
 <br>
 
+---
 ### 12 - Binding and Screen Size
 컴포넌트를 만들고 상태를 바인딩하는 방법에 대해 배운다.   
 이전에는 많은 뷰들이 사용되고 있기 때문에 뷰 코드가 지저분해지고 있다.   
 컴포넌트를 어떻게 만들고 컴포넌트간에 상태를 어떻게 공유하는가를 배울것이다.   
+
 <br>
+
+Binding이란?   
+- 정의된 `@State` 변수를 사용하고 해당 값을 지켜보고 변경된 값을 넘겨받음, 변경이 일어날 경우 상태에 따라 뷰를 변경하여 그리기 위해 사용   
+
+<br>
+
+컴포넌트 분리   
+- 컴포넌트 분리 시 같은 파일일 경우 `@State` 변수를 사용해야 한다면 `@Binding` 변수를 선언해주고 `$`를 통해 넘겨줌으로써 해결가능하다.
+- 그러나 다른 파일일 경우에는 위와 같이 적용 시 프리뷰 쪽에서 오류가 난다.
+    - `.constant(<#T##value: Bool##Bool#>)`과 같은 디폴트 값을 설정해줘야 프리뷰를 랜더링 가능한것으로 보인다.
+    
+ `let screen = UIScreen.main.bounds`   
+ - 위와 같이 스크린이라는 상수를 선언해 놓으면 `screen.height` 과 같은 값을 사용해서 화면마다 사이즈가 다른 뷰에 대한 대처가 가능.
+ - offset 과 같은 기능을 사용할 때 유용할 것으로 보임
+
+<br>
+
+💡 @State 변수를 사용할 때 그냥 사용하는 것과 `$` 즉 바인딩으로 사용하는 것의 정확한 차이는 뭘까?  
+✅  상위 뷰에서 `@State` 변수를 선언하고 사용시에는 그냥 사용해도 되지만 component로 분리된 하위 뷰에서는 정의된 `@State` 변수를 사용하기 위해서 `@Binding` 을 선언해주어야하고 상위 뷰에서 `$변수이름`으로 전달해주어 다른 부분에서  `@State` 변수의 값이 변경되도 감지 할 수 있다.    
+
+<br>
+
+### 13 - ScrollView and Repeat
+
+<br>
+
+---
