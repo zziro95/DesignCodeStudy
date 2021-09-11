@@ -256,6 +256,7 @@ Color.white의 frame을 .frame() 메서드를 통해 잡아주었고, Color뷰�
 
 Binding이란?   
 - 정의된 `@State` 변수를 사용하고 해당 값을 지켜보고 변경된 값을 넘겨받음, 변경이 일어날 경우 상태에 따라 뷰를 변경하여 그리기 위해 사용   
+- 외부의 값에 연결되어 있다.   
 
 <br>
 
@@ -276,6 +277,20 @@ Binding이란?
 <br>
 
 ### 13 - ScrollView and Repeat
+ScrollView()에 대해 배웠다.      
+강의를 좀 더 빨리봤더라면~ 아쉽지만 어쩔수 없고~   
+
+<br>
+
+`ScrollView`   
+- 스크롤 뷰의  목적은 스크롤할 수 있는 프레임을 설정하는 것이며, 콘텐츠는 레이아웃을 결정한다. 
+- 스크롤 뷰는 스크롤 기능 제공과 프레임설정하는 것일뿐 나머지 많은 부분들은 콘텐츠를 어떻게 작성해주냐에 달렸다.  
+- `init(_ axes: Axis.Set = .vertical, showsIndicators: Bool = true, content: () -> Content)`   
+- axes:  스크롤이 가능한 축 (default는 .vertical)
+- showsIndicators: 스크롤 시 인디케이터 표시 여부 (default = true)
+- content: 보여줄 컨텐츠   
+- 스크롤뷰 사용시 default 값을 사용할 경우에는 값을 넣어주지 않는 편이 나을것 같다.
+- horizontal 방향 스크롤 뷰를 쓰는 경우 반복되는 뷰를 HStack 넣어주어 원하는 화면을 만들 수 있었다.   
 
 <br>
 
