@@ -346,3 +346,58 @@ ForEach(sectionData) { item in
 <br>
 
 ---
+### 16 - Modal Presentation 
+벌써? 아직? 16강이다. 벌써가 좋겠군..👏   
+
+<br>
+
+랜더링 모드를 또 다룬다. 봤던 내용이지만 기억이 나지 않는다면? 모르는 거지 뭐 복습~해보자     
+랜더링 모드: [.renderingMode(.mode)](https://developer.apple.com/documentation/swiftui/image/renderingmode(_:)).  
+- SwiftUI가 이미지를 있는 그대로 또는 다른 모드를 사용하여 렌더링하는지 여부를 나타낸다.   
+
+<br>
+
+`template`   
+- 모든 불투명한 픽셀을 전경색으로 렌더링하는 모드
+`original`     
+- 비트맵 이미지의 픽셀을 있는 그대로 렌더링하는 모드    
+공식 문서에 예시가 잘 나와있는데 `SF Symbols`을 사용하는 경우에 유용하게 쓰일 것 같다.   
+쓸 기회가 생긴다면 적용해 보고 싶다. (재밌을듯)    
+
+<br>
+
+`SwiftUI`에서 모달을 띄우는 방법은 두가지다. `.sheet()`, `fullScreenOver()`   
+차이는 `fullScreenOver()`가 이름 그대로 모달 형식으로 화면을 띄우는 데 풀스크린으로 띄운다는 것이다.   
+요즘 네이밍이 부쩍 신경 쓰이는데 참 이름 잘 지었네.. 굳    
+
+<br>
+
+`.shadow()` modifier를 두 번이나 적용해 주었다.   
+이전에 `.frame()` modifier도 두 번이나 적용하는 것에 대해 혼란스러웠는데, `SwiftUI`에서는 이런 경우가 흔한가 보다.   
+얼렁 보려고 쌓아놓은 SwiftUI관련 WWDC를 봐야겠단 생각이 다시 한 번 들었다.   
+<br>
+
+<div align="center">
+    <img src="./images/sharpShadow.png"  width="50" height="50" >
+    <img src="./images/spreadShadow.png"  width="50" height="50" >
+</div>
+
+여기서 `.shadow()` modifier를 두 번이나 적용한 이유는 실생활과 마찬가지로 두 가지 빛을 가질 수 있으므로 이중 그림자를 적용해 준 것이다.   
+처음 적용한 건 조금 더 날카로운 모양, 그 다음 적용한 건 더 펴져있는 모양이 적용된걸 볼 수 있다.   
+`SwiftUI`에서 `modifier`를 잘 이해하고 사용한다면 쉽게 세밀하고, 화려한 뷰들을 만들어 낼 수 있다.   
+
+```swift
+Image(systemName: "bell")
+    .renderingMode(.original)
+    .font(.system(size: 16, weight: .medium))
+    .frame(width: 36, height: 36)
+    .background(Color.white)
+    .clipShape(Circle())
+    .shadow(color: Color("primary").opacity(0.1), radius: 1, x: 0, y: 1)
+    .shadow(color: Color("primary").opacity(0.2), radius: 10, x: 0, y: 10)
+```   
+`.clipShape()` 다음에 `.shadow()`를 적용한 것에 대해서도 이제는 많이 익숙해졌고, `SwiftUI`와 전보단 친해졌다.    
+
+<br>
+
+---
