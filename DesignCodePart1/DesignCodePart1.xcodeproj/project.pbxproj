@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		2B33137326E106770002B9C0 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B33137226E106770002B9C0 /* Home.swift */; };
 		2BD1DC0D26E902C000172B2C /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD1DC0C26E902C000172B2C /* HomeView.swift */; };
+		E254BC5B272D7E56002011D1 /* UpdateList.swift in Sources */ = {isa = PBXBuildFile; fileRef = E254BC5A272D7E56002011D1 /* UpdateList.swift */; };
 		E28088FE26CAA86C009A2290 /* DesignCodePart1App.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */; };
 		E280890026CAA86C009A2290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E28088FF26CAA86C009A2290 /* ContentView.swift */; };
 		E280890226CAA86D009A2290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E280890126CAA86D009A2290 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* Begin PBXFileReference section */
 		2B33137226E106770002B9C0 /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		2BD1DC0C26E902C000172B2C /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		E254BC5A272D7E56002011D1 /* UpdateList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateList.swift; sourceTree = "<group>"; };
 		E28088FA26CAA86C009A2290 /* DesignCodePart1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DesignCodePart1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E28088FD26CAA86C009A2290 /* DesignCodePart1App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesignCodePart1App.swift; sourceTree = "<group>"; };
 		E28088FF26CAA86C009A2290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				2B33137226E106770002B9C0 /* Home.swift */,
 				2BD1DC0C26E902C000172B2C /* HomeView.swift */,
 				E280890C26D3E2BC009A2290 /* MenuView.swift */,
+				E254BC5A272D7E56002011D1 /* UpdateList.swift */,
 				E280890126CAA86D009A2290 /* Assets.xcassets */,
 				E280890626CAA86D009A2290 /* Info.plist */,
 				E280890326CAA86D009A2290 /* Preview Content */,
@@ -149,6 +152,7 @@
 			files = (
 				E280890026CAA86C009A2290 /* ContentView.swift in Sources */,
 				E280890D26D3E2BC009A2290 /* MenuView.swift in Sources */,
+				E254BC5B272D7E56002011D1 /* UpdateList.swift in Sources */,
 				2B33137326E106770002B9C0 /* Home.swift in Sources */,
 				2BD1DC0D26E902C000172B2C /* HomeView.swift in Sources */,
 				E28088FE26CAA86C009A2290 /* DesignCodePart1App.swift in Sources */,
