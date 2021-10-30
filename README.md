@@ -404,16 +404,35 @@ Image(systemName: "bell")
 ### 17 - Navigation View and List 
 꾸준한 게 참 중요해. 레고레고      
 `NavigationView`에는 리스트 레이아웃을 쉽게 만들고, 다이나믹한 라지 타이틀이나, 내비게이션 바 버튼, 리스트 스타일과 같은 기능이 있다.   
+`NavigationView<Content> where Content : View`   
+- 정보의 연속성이 있는 경우 탐색할 때 내비게이션 방식으로 전환을 한다.   
+- `SwiftUI`에서 그 기능을 제공해주는 녀석이 `NavigationView`이고 , `View` 프로토콜을 따르는  콘텐츠들이 `NavigationLink(탐색 링크)`를 통해 대상 뷰와. 직접 연결된다.    
+- `.navigationTitle()`, `.navigationBarTitleDisplayMode(.mode)` 등을 통해 여러가지를 지정해 줄 수 있다.  
 <br>
 
 `.navigationTitle()`로 타이틀을 지정해 줄 수도 있고, `.navigationBarTitleDisplayMode()`로 바 타이틀의 모드를 설정해 줄 수도 있다.   
 `List`를 이용하여 각 로우에 `NavigationLink`를 만들어 주면 손쉽게 탐색 리스트를 만들 수 있다.   
 <br>
 
+`NavigationLink<Label, Destination> where Label : View, Destination : View`
+- destination은 말 그대로 어떤 뷰로 이동할 것이냐를 지정해주는 것이다.  보여질 뷰를 설정해주면 된다.
+- label은 목적지로 이동하기 위해 접근 통로 역할을 하는 뷰라고 생각하였다.    
+
+<br>
+
+💡 `List`를 사용하는데 구분선이 화면을 다 차지하는 것도 아니고 양쪽에 동일한 간격이 띄어져 있는것도 아닌 애매하게 왼쪽만 띄어져 있다.   
+구분선을 원하는 대로 표현(화면에서 규일하게 띄우기 or 화면 끝까지 그리기)하는 방법은 뭘까? 아니면 `List`말고 다른 방법으로 그리는 방법은?   
+✅  프젝 따로 만들어서 `List`로 여러가지 구현해보고, 다른 방법으로는 커스텀 뷰 + Divider()를 이용하여 `List`처럼 보이게 끔 그릴 수 있을거 같다.   
+
+<br>
+
 특별했던 것은 없었고, 나머지는 modifier를 통해 뷰를 그려주는 내용이었다.   
 modifier를 통해 뷰에 대한 속성들을 설정해 주는 게 익숙해진듯하다.   
 처음 강의를 들었을 때에 비하면 코드가 엄청 잘 읽힌다.   
 <br>
+
+---
+### 18 - Navigation Style and Passing Data
 
 ---
 ### 마무리하기 전 To-Do-List
