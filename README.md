@@ -433,6 +433,9 @@ modifier를 통해 뷰에 대한 속성들을 설정해 주는 게 익숙해진�
 
 ---
 ### 18 - Navigation Style and Passing Data
+이번 시간은 `NavigationLink`의 `destination` 화면을 만들어 주는 작업을 하였다.   
+`List`가 여러 스타일을 지원한다는 것을 알게 되었다.    
+`.listStyle()` 메서드를 사용하면 되고, [ListStyle](https://developer.apple.com/documentation/swiftui/liststyle) 문서를 살펴보니 생각보다 많은 스타일을 제공해 주고 있다.      
 
 ---
 ### 마무리하기 전 To-Do-List

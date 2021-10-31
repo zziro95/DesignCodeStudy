@@ -13,7 +13,7 @@ struct UpdateList: View {
         NavigationView {
             List(updateData) { update in
                 NavigationLink(
-                    destination: Text(update.text)) {
+                    destination: UpdateDetail(update: update)) {
                     HStack {
                         Image(update.image)
                             .resizable()
